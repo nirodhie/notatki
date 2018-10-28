@@ -1,0 +1,61 @@
+Słownik pojęć
+
+GIT - narzędzie do śledzenia zmian w plikach, 
+branch - mirror zbioru plików z których składa się projekt, na nim robimy eksperymenty i nowe wersje, głównej stabilnej wersji nie ruszamy
+master branch - główne wzorcowe repozytorium
+clone - kopia repozytorium do lokalnej modyfikacji, dzięki temu nie ruszamy mastera na serwerze, ale też zmiany olkanie wprowadzone nie będą automatycznie uwzględnione w wersji będacej na serwerze
+push - wysyłanie lokalnych plików na serwer GITa
+merge - łączenie własnej wersji programu z wersją na serwerze
+pull - ściąganie najnowszej wersji z serwera i łączenie jej z tym co mamy lokalnie
+fetch - ściąganie ale bez łączenia, dzięki czemu możemy porównać nasz kod z tym co jest na serwerze
+checkout - ???
+
+
+komendy wiersza poleceń
+
+W windows używamy Git Bash
+pwd - w jakim katalogu jesteśmy
+cd ..  - przejdź do katalogu wyżej
+mkdir  - utwórz katalog dla projektu, lepiej korzystać z nazw bez spacji
+ls - lista plików w katalogu
+rm <nazwa pliku> - usuwa plik z aktualnego katalogu
+
+git init - zaczyna traktować aktualny katalog jako repozytorium gita, dodaje w nim katalog .git, który śledzi zmiany
+git status - pokazuje listę plików które są śledzone oraz tych które nie są
+git add <nazwa pliku> - zaczyna śledzić plik który podaliśmy
+	git rm -- cached <nazwa pliku> - jeśli chcemu aby dany plik przestał być śledzony
+
+git commit -m "Initial commit" - dodaje pliki z listy do Initial commit ???
+On branch master -  to oznacza że pracujemy na głównej wersji przeznaczonej do wypuszczenia
+git checkout -b 'NowaWersja' - tworzymy nowy branch programu o nazwie "NowaWersja" i przechodzi do niego jako do aktywnego repozytorium
+git branch <nazwa> - tylko tworzy nowy branch
+git checkout <nazwa> - tylko przechodzi do danego branch
+git branch - pokazuje liste branchy
+
+git add . - dodaje weszystkie pliki w katalogu
+git commit -a -m "Nowa wersja" - robi commit dla wszystkich plików w katalogu, commit czyli potwierdza że pliki mają być wysłane
+
+git merge 'NowaWersja' - łączy branch "NowaWersja" z master branch
+
+.gitignore - tworzymy plik w którym podajemy co ma nie być dodawane, np:
+	*.html - wszystkie pliki html będą ignorowane, można też podawać konkretne pliki
+
+git rm --cached <nazwapliku> - usuwa plik z listy 
+git rm <nazwapliku> - usuwa plik z listy gita
+git rm -f <nazwa pliku> - usuwa plim z listy gita oraz z lokalnego systemu plików
+
+git log - kto dokonał jakich zmian, podawany jest autor i data zmian
+
+
+Sourcetree - darmowe GUI do GITa
+	www.sourcetreeapp.com
++New Repository - tworzenie nowego repozytorium
+	można skopiować cały katalog metodą  drag+drop
+Jeśli zmienimy coś w pliku który jest w lokalnym repozytorium to program wyróżni wprowadzone zmiany
+Unstage hunk - powoduje że zmiany nie zostaną przesłane do GITa\
+discard hunk - przywraca poprzednią wersję pliku
+
+Dodawanie tagów - oznaczenia wersji i cech 
+ignore everything beneath - ???
+
+
