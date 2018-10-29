@@ -1,0 +1,16 @@
+Najpierw 
+apt install cifs-utils
+
+Bo jako cifs podlaczymy udzial SMB
+
+
+Potem w webmin
+
+Un-used modules -> Samba Windows File Sharing -> Convert Users ->  Naciskamy przycisk "Convert Users"
+	• Dzieki powyzszemu mamy utworzonego uzytkownika któremu mozemy nadac jakies uprawnienia (przekonwertowalismy konta linuxowe na konta samby)
+	
+System -> Disk and Network Filesystems -> tu ustalamy jakie udzialy montujemy w systemie
+	Ale najpierw musimy utworzyc katalogi które beda skrótami do udzialów np. W /mnt/
+	
+	Jak juz to zrobimy to wybieramy Add Mount i jako typ cifs
+Mounted as: (tu podajemy nazwe lokalnego katalogu w /mnt który utworzylismy)

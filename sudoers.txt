@@ -1,0 +1,8 @@
+sudo adduser <username> sudo
+
+The change will take effect the next time the user logs in.
+This works because /etc/sudoers is pre-configured to grant permissions to all members of this group (You should not have to make any changes to this):
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+
+As long as you have access to a user that is in the same groups as your "original" user, you can delete the old one.
