@@ -1,4 +1,4 @@
-Słownik pojęć
+﻿Słownik pojęć
 
 GIT - narzędzie do śledzenia zmian w plikach, 
 branch - mirror zbioru plików z których składa się projekt, na nim robimy eksperymenty i nowe wersje, głównej stabilnej wersji nie ruszamy
@@ -8,7 +8,7 @@ push - wysyłanie lokalnych plików na serwer GITa
 merge - łączenie własnej wersji programu z wersją na serwerze
 pull - ściąganie najnowszej wersji z serwera i łączenie jej z tym co mamy lokalnie
 fetch - ściąganie ale bez łączenia, dzięki czemu możemy porównać nasz kod z tym co jest na serwerze
-checkout - ???
+checkout - zmienia branch na podany, branch jest rozumiany jako podwersja programu
 
 
 komendy wiersza poleceń
@@ -25,14 +25,14 @@ git status - pokazuje listę plików które są śledzone oraz tych które nie s
 git add <nazwa pliku> - zaczyna śledzić plik który podaliśmy
 	git rm -- cached <nazwa pliku> - jeśli chcemu aby dany plik przestał być śledzony
 
-git commit -m "Initial commit" - dodaje pliki z listy do Initial commit ???
+git commit -m "Initial commit" - dodaje pliki z listy do commit czyli ostatecznie potwierdza co ma być wysłane
 On branch master -  to oznacza że pracujemy na głównej wersji przeznaczonej do wypuszczenia
 git checkout -b 'NowaWersja' - tworzymy nowy branch programu o nazwie "NowaWersja" i przechodzi do niego jako do aktywnego repozytorium
 git branch <nazwa> - tylko tworzy nowy branch
 git checkout <nazwa> - tylko przechodzi do danego branch
 git branch - pokazuje liste branchy
 
-git add . - dodaje weszystkie pliki w katalogu
+git add . - dodaje wszystkie pliki w katalogu
 git commit -a -m "Nowa wersja" - robi commit dla wszystkich plików w katalogu, commit czyli potwierdza że pliki mają być wysłane
 
 git merge 'NowaWersja' - łączy branch "NowaWersja" z master branch
@@ -52,7 +52,7 @@ Sourcetree - darmowe GUI do GITa
 +New Repository - tworzenie nowego repozytorium
 	można skopiować cały katalog metodą  drag+drop
 Jeśli zmienimy coś w pliku który jest w lokalnym repozytorium to program wyróżni wprowadzone zmiany
-Unstage hunk - powoduje że zmiany nie zostaną przesłane do GITa\
+Unstage hunk - powoduje że zmiany nie zostaną przesłane do GITa
 discard hunk - przywraca poprzednią wersję pliku
 
 Dodawanie tagów - oznaczenia wersji i cech 
